@@ -6,7 +6,7 @@ module.exports = {
     password: "root",
     database: "bdTrabalho",
     migrations: ["src/database/migrations/*.ts"],
-    entities: ["src/entities/*.ts"],
+    entities: ["src/models/*.ts"],
     synchronize: false,
     cli: {
         migrationsDir: "./src/database/migrations"

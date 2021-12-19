@@ -13,6 +13,10 @@ export class CreateGenres1639949164939 implements MigrationInterface {
                         isPrimary: true
                     },
                     {
+                        name: 'id_reference',
+                        type: 'bigint',
+                    },
+                    {
                         name: 'name',
                         type: 'varchar'
                     },
