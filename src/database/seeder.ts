@@ -17,6 +17,7 @@ class SeederRun {
             console.log('Connection database sucessfully')
 
             await connection.runMigrations();
+            console.log(' *** Run Migrations ***')
 
             const connectGenre = getRepository(Genre)
             const connectMovie = getRepository(Movie)
@@ -71,7 +72,9 @@ class SeederRun {
                     if (movie.genre_ids.length > 0){
                         for (const genre of movie.genre_ids) {
                             const modelMovieGenre = connectMovieGenre.create({ id_movie: modelMovie.id, id_genre: genre })
+                            await connectMovieGenre.save(modelMovieGenre)
                         }
+                        console.log(' == Gênero associado == ')
                     }
                     
                     // Person
@@ -92,9 +95,11 @@ class SeederRun {
                             profile_path: person.profile_path
                         })
                         await connectPerson.save(modelPerson)
+                        console.log(' Person cadastrado ')
 
                         const modelMoviePerson = connetMoviePerson.create({ id_movie: modelMovie.id, id_person: modelPerson.id })
                         await connetMoviePerson.save(modelMoviePerson)
+                        console.log(' == Person associado == ')
                     }
                 }
                 console.log(' == Filme cadastrado == ')
