@@ -18,39 +18,48 @@ export class CreateMovies1639945532891 implements MigrationInterface {
                     },
                     {
                         name: 'original_lang',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'release_date',
                         type: 'timestamp',
+                        isNullable: true
                     },
                     {
                         name: 'description',
-                        type: 'text'
+                        type: 'text',
+                        isNullable: true
                     },
                     {
                         name: 'popularity',
-                        type: 'real'
+                        type: 'real',
+                        isNullable: true
                     },
                     {
                         name: 'poster_path',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'backdrop_path',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'vote_average',
-                        type: 'real'
+                        type: 'real',
+                        isNullable: true
                     },
                     {
                         name: 'vote_count',
-                        type: 'int'
+                        type: 'int',
+                        isNullable: true
                     },
                     {
                         name: 'adult',
-                        type: 'boolean'
+                        type: 'boolean',
+                        isNullable: true
                     },
                     {
                         name: 'created_at',

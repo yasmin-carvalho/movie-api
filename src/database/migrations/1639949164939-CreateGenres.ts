@@ -9,12 +9,8 @@ export class CreateGenres1639949164939 implements MigrationInterface {
                 columns: [
                     {
                         name: 'id',
-                        type: 'serial',
-                        isPrimary: true
-                    },
-                    {
-                        name: 'id_reference',
                         type: 'bigint',
+                        isPrimary: true
                     },
                     {
                         name: 'name',

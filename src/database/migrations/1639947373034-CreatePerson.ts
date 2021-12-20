@@ -14,35 +14,43 @@ export class CreatePerson1639947373034 implements MigrationInterface {
                     },
                     {
                         name: 'gender',
-                        type: 'int'
+                        type: 'int',
+                        isNullable: true
                     },
                     {
                         name: 'name',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'popularity',
-                        type: 'real'
+                        type: 'real',
+                        isNullable: true
                     },
                     {
                         name: 'profile_path',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'character',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'biography',
-                        type: 'text'
+                        type: 'text',
+                        isNullable: true
                     },
                     {
                         name: 'birthday',
-                        type: 'timestamp'
+                        type: 'timestamp',
+                        isNullable: true
                     },
                     {
                         name: 'place_of_birth',
-                        type: 'varchar'
+                        type: 'varchar',
+                        isNullable: true
                     },
                     {
                         name: 'created_at',

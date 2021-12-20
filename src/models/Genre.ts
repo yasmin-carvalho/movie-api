@@ -2,17 +2,16 @@ import {
     Column,
     CreateDateColumn,
     Entity,
-    PrimaryGeneratedColumn,
+    OneToMany,
+    PrimaryColumn,
     UpdateDateColumn,
   } from 'typeorm';
+import { MovieGenre } from './MovieGenre';
   
   @Entity('genres')
   class Genre {
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     readonly id: number;
-    
-    @Column()
-    id_reference: number;
   
     @Column()
     name: string;
@@ -22,6 +21,9 @@ import {
   
     @UpdateDateColumn()
     updated_at: Date;
+
+    @OneToMany(() => MovieGenre, movieGenre => movieGenre.genre)
+    movieGenre: MovieGenre[]
   }
   
   export { Genre };
